@@ -30,7 +30,6 @@ class CirclesMod(loader.Module):
 	strings_ru = {
 		"name": "Alt-Circles",
         "_cls_doc": "Округляет всё - ответом на сообщение",
-		"_cmd_doc_roundcmd": "round <Ответ на изображение/стикер или видео/gиф>",
         "processing_image": "<b>Обработка изображения</b><emoji document_id=5427181942934088912>💬</emoji>",
         "processing_video": "<b>Обработка видео</b><emoji document_id=5427181942934088912>💬</emoji>",
         "reply_prompt": "<b><emoji document_id=5260249440450520061>🤚</emoji>|Ответьте на изображение/стикер или видео/gif!</b>",
@@ -46,7 +45,7 @@ class CirclesMod(loader.Module):
 	
 	@loader.sudo
 	async def roundcmd(self, message):
-		"""round <Reply to image/sticker or video/gif>"""
+		"""<Reply to image/sticker or video/gif>"""
 		reply = None
 		if message.is_reply:
 			reply = await message.get_reply_message()
